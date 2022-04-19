@@ -339,7 +339,7 @@
               <MiscControls>--no_rtti --split_sections -c --apcs=interwork --no_depend_system_headers --md --gnu --cpu=Cortex-M4.fp.sp --preinclude=mbed_config.h</MiscControls>
               <Define>DEVICE_RTC=1 DEVICE_SLEEP=1 ARM_MATH_CM4 MBED_BUILD_TIMESTAMP=1567486712.43 TARGET_STM32F4 __ASSERT_MSG TARGET_NAME=NUCLEO_F446RE TARGET_RELEASE TARGET_STM32F446xE DEVICE_PORTINOUT=1 TARGET_FF_MORPHO DEVICE_I2C_ASYNCH=1 TARGET_FF_ARDUINO TARGET_RTOS_M4_M7 DEVICE_CAN=1 DEVICE_PORTOUT=1 DEVICE_FLASH=1 DEVICE_STDIO_MESSAGES=1 DEVICE_ANALOGOUT=1 TARGET_LIKE_MBED DEVICE_SERIAL_FC=1 DEVICE_SERIAL=1 DEVICE_ANALOGIN=1 TARGET_LIKE_CORTEX_M4 TARGET_CORTEX_M TARGET_NUCLEO_F446RE USB_STM_HAL TARGET_STM32F446RE DEVICE_I2C=1 __CORTEX_M4 TARGET_CORTEX DEVICE_LOWPOWERTIMER=1 TARGET_STM TOOLCHAIN_ARM DEVICE_INTERRUPTIN=1 TOOLCHAIN_ARM_STD __CMSIS_RTOS DEVICE_PWMOUT=1 DEVICE_SERIAL_ASYNCH=1 TARGET_FAMILY_STM32 DEVICE_SPI=1 __MBED__=1 DEVICE_SPISLAVE=1 DEVICE_PORTIN=1 TARGET_M4 __FPU_PRESENT=1 DEVICE_I2CSLAVE=1 USBHOST_OTHER DEVICE_SPI_ASYNCH=1 TRANSACTION_QUEUE_SIZE_SPI=2 __MBED_CMSIS_RTOS_CM</Define>
               <Undefine></Undefine>
-              <IncludePath>/usr/src/mbed-sdk;.\CAN;.\Calibration;.\Config;.\DRV8323;.\FastMath;.\FastPWM;.\FlashWriter;.\PositionSensor;.\PreferenceWriter;.\mbed-dev;mbed-dev/cmsis;mbed-dev/cmsis/TARGET_CORTEX_M;mbed-dev/cmsis/TARGET_CORTEX_M/TOOLCHAIN_ARM;mbed-dev/drivers;mbed-dev/hal;mbed-dev/hal/storage_abstraction;mbed-dev/platform;mbed-dev/targets/TARGET_STM;mbed-dev/targets/TARGET_STM/TARGET_STM32F4;mbed-dev/targets/TARGET_STM/TARGET_STM32F4/TARGET_STM32F446xE;mbed-dev/targets/TARGET_STM/TARGET_STM32F4/TARGET_STM32F446xE/TARGET_NUCLEO_F446RE;mbed-dev/targets/TARGET_STM/TARGET_STM32F4/TARGET_STM32F446xE/device;mbed-dev/targets/TARGET_STM/TARGET_STM32F4/device;.\HardwareSetup;.\Controller;.\PIDRegulator;.\CurrentSensor</IncludePath>
+              <IncludePath>.\core\CAN;.\core\Calibration;.\config;.\core\DRV8323;.\utils\FastMath;.\utils\FastPWM;.\utils\FlashWriter;.\core\PositionSensor;.\utils\PreferenceWriter;.\mbed-dev;mbed-dev/cmsis;mbed-dev/cmsis/TARGET_CORTEX_M;mbed-dev/cmsis/TARGET_CORTEX_M/TOOLCHAIN_ARM;mbed-dev/drivers;mbed-dev/hal;mbed-dev/hal/storage_abstraction;mbed-dev/platform;mbed-dev/targets/TARGET_STM;mbed-dev/targets/TARGET_STM/TARGET_STM32F4;mbed-dev/targets/TARGET_STM/TARGET_STM32F4/TARGET_STM32F446xE;mbed-dev/targets/TARGET_STM/TARGET_STM32F4/TARGET_STM32F446xE/TARGET_NUCLEO_F446RE;mbed-dev/targets/TARGET_STM/TARGET_STM32F4/TARGET_STM32F446xE/device;mbed-dev/targets/TARGET_STM/TARGET_STM32F4/device;.\hardware;.\core\Controller;.\core\PIDRegulator;.\core\CurrentSensor</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -396,12 +396,12 @@
             <File>
               <FileName>hw_setup.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>.\HardwareSetup\hw_setup.cpp</FilePath>
+              <FilePath>.\hardware\hw_setup.cpp</FilePath>
             </File>
             <File>
               <FileName>hw_setup.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\HardwareSetup\hw_setup.h</FilePath>
+              <FilePath>.\hardware\hw_setup.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -441,32 +441,32 @@
             <File>
               <FileName>Controller.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>.\Controller\Controller.cpp</FilePath>
+              <FilePath>.\core\Controller\Controller.cpp</FilePath>
             </File>
             <File>
               <FileName>Controller.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\Controller\Controller.h</FilePath>
+              <FilePath>.\core\Controller\Controller.h</FilePath>
             </File>
             <File>
               <FileName>CurrentController.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>.\Controller\CurrentController.cpp</FilePath>
+              <FilePath>.\core\Controller\CurrentController.cpp</FilePath>
             </File>
             <File>
               <FileName>CurrentController.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\Controller\CurrentController.h</FilePath>
+              <FilePath>.\core\Controller\CurrentController.h</FilePath>
             </File>
             <File>
               <FileName>SpeedController.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>.\Controller\SpeedController.cpp</FilePath>
+              <FilePath>.\core\Controller\SpeedController.cpp</FilePath>
             </File>
             <File>
               <FileName>SpeedController.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\Controller\SpeedController.h</FilePath>
+              <FilePath>.\core\Controller\SpeedController.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -476,12 +476,12 @@
             <File>
               <FileName>CurrentSensor.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>.\CurrentSensor\CurrentSensor.cpp</FilePath>
+              <FilePath>.\core\CurrentSensor\CurrentSensor.cpp</FilePath>
             </File>
             <File>
               <FileName>CurrentSensor.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\CurrentSensor\CurrentSensor.h</FilePath>
+              <FilePath>.\core\CurrentSensor\CurrentSensor.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -491,17 +491,17 @@
             <File>
               <FileName>PositionSensor.h</FileName>
               <FileType>5</FileType>
-              <FilePath>PositionSensor/PositionSensor.h</FilePath>
+              <FilePath>.\core\PositionSensor\PositionSensor.h</FilePath>
             </File>
             <File>
               <FileName>PositionSensorMA730.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>.\PositionSensor\PositionSensorMA730.cpp</FilePath>
+              <FilePath>.\core\PositionSensor\PositionSensorMA730.cpp</FilePath>
             </File>
             <File>
               <FileName>PositionSensorMA730.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\PositionSensor\PositionSensorMA730.h</FilePath>
+              <FilePath>.\core\PositionSensor\PositionSensorMA730.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -511,12 +511,12 @@
             <File>
               <FileName>calibration.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>Calibration/calibration.cpp</FilePath>
+              <FilePath>.\core\Calibration\calibration.cpp</FilePath>
             </File>
             <File>
               <FileName>calibration.h</FileName>
               <FileType>5</FileType>
-              <FilePath>Calibration/calibration.h</FilePath>
+              <FilePath>.\core\Calibration\calibration.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -526,12 +526,12 @@
             <File>
               <FileName>DRV.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>DRV8323/DRV.cpp</FilePath>
+              <FilePath>.\core\DRV8323\DRV.cpp</FilePath>
             </File>
             <File>
               <FileName>DRV.h</FileName>
               <FileType>5</FileType>
-              <FilePath>DRV8323/DRV.h</FilePath>
+              <FilePath>.\core\DRV8323\DRV.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -541,12 +541,12 @@
             <File>
               <FileName>CAN_com.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>CAN/CAN_com.cpp</FilePath>
+              <FilePath>.\core\CAN\CAN_com.cpp</FilePath>
             </File>
             <File>
               <FileName>CAN_com.h</FileName>
               <FileType>5</FileType>
-              <FilePath>CAN/CAN_com.h</FilePath>
+              <FilePath>.\core\CAN\CAN_com.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -556,12 +556,12 @@
             <File>
               <FileName>PIDRegulator.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>.\PIDRegulator\PIDRegulator.cpp</FilePath>
+              <FilePath>.\core\PIDRegulator\PIDRegulator.cpp</FilePath>
             </File>
             <File>
               <FileName>PIDRegulator.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\PIDRegulator\PIDRegulator.h</FilePath>
+              <FilePath>.\core\PIDRegulator\PIDRegulator.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -571,27 +571,27 @@
             <File>
               <FileName>FastMath.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>FastMath/FastMath.cpp</FilePath>
+              <FilePath>.\utils\FastMath\FastMath.cpp</FilePath>
             </File>
             <File>
               <FileName>FastMath.h</FileName>
               <FileType>5</FileType>
-              <FilePath>FastMath/FastMath.h</FilePath>
-            </File>
-            <File>
-              <FileName>LUT.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>FastMath/LUT.h</FilePath>
+              <FilePath>.\utils\FastMath\FastMath.h</FilePath>
             </File>
             <File>
               <FileName>math_ops.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>.\FastMath\math_ops.cpp</FilePath>
+              <FilePath>.\utils\FastMath\math_ops.cpp</FilePath>
             </File>
             <File>
               <FileName>math_ops.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\FastMath\math_ops.h</FilePath>
+              <FilePath>.\utils\FastMath\math_ops.h</FilePath>
+            </File>
+            <File>
+              <FileName>LUT.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\utils\FastMath\LUT.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -599,29 +599,24 @@
           <GroupName>FastPWM</GroupName>
           <Files>
             <File>
-              <FileName>stm32f4xx_flash.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>FlashWriter/stm32f4xx_flash.c</FilePath>
+              <FileName>FastPWM_common.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\utils\FastPWM\FastPWM_common.cpp</FilePath>
             </File>
             <File>
               <FileName>FastPWM.h</FileName>
               <FileType>5</FileType>
-              <FilePath>FastPWM/FastPWM.h</FilePath>
-            </File>
-            <File>
-              <FileName>FastPWM_common.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>FastPWM/FastPWM_common.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>FastPWM_STM_TIM.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>FastPWM/Device/FastPWM_STM_TIM.cpp</FilePath>
+              <FilePath>.\utils\FastPWM\FastPWM.h</FilePath>
             </File>
             <File>
               <FileName>FastPWM_STM_TIM_PinOut.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>FastPWM/Device/FastPWM_STM_TIM_PinOut.cpp</FilePath>
+              <FilePath>.\utils\FastPWM\Device\FastPWM_STM_TIM_PinOut.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>FastPWM_STM_TIM.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\utils\FastPWM\Device\FastPWM_STM_TIM.cpp</FilePath>
             </File>
           </Files>
         </Group>
@@ -631,17 +626,22 @@
             <File>
               <FileName>FlashWriter.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>FlashWriter/FlashWriter.cpp</FilePath>
+              <FilePath>.\utils\FlashWriter\FlashWriter.cpp</FilePath>
             </File>
             <File>
               <FileName>FlashWriter.h</FileName>
               <FileType>5</FileType>
-              <FilePath>FlashWriter/FlashWriter.h</FilePath>
+              <FilePath>.\utils\FlashWriter\FlashWriter.h</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_flash.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\utils\FlashWriter\stm32f4xx_flash.c</FilePath>
             </File>
             <File>
               <FileName>stm32f4xx_flash.h</FileName>
               <FileType>5</FileType>
-              <FilePath>FlashWriter/stm32f4xx_flash.h</FilePath>
+              <FilePath>.\utils\FlashWriter\stm32f4xx_flash.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -649,14 +649,14 @@
           <GroupName>PreferenceWriter</GroupName>
           <Files>
             <File>
-              <FileName>PreferenceWriter.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>PreferenceWriter/PreferenceWriter.h</FilePath>
-            </File>
-            <File>
               <FileName>PrefrenceWriter.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>PreferenceWriter/PrefrenceWriter.cpp</FilePath>
+              <FilePath>.\utils\PreferenceWriter\PrefrenceWriter.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>PreferenceWriter.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\utils\PreferenceWriter\PreferenceWriter.h</FilePath>
             </File>
           </Files>
         </Group>
